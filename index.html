@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SONES — Plan Stratégique de Développement 2026-2030 · Méthodologie</title>
+<meta name="description" content="Proposition méthodologique pour l'élaboration du Plan Stratégique de Développement et du Contrat de Performance de la Société Nationale des Eaux du Sénégal (SONES) — 2026-2030." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css" />
+<link rel="icon" href="assets/logoSONES.jpg" />
+</head>
+<body>
+
+<!-- Scroll progress -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- NAVBAR -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#hero" class="nav__brand">
+      <img src="assets/logoSONES.jpg" alt="Logo SONES" class="nav__logo" />
+      <span class="nav__brand-text">SONES<small>PSD 2026-2030</small></span>
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#contexte">Contexte</a>
+      <a href="#consultant">Le Consultant</a>
+      <a href="#methodologie">Méthodologie</a>
+      <a href="#programme">Programme</a>
+      <a href="#equipe">L'Équipe</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero__bg">
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+    <div class="hero__glass"></div>
+    <canvas id="bubbles" class="hero__bubbles"></canvas>
+  </div>
+
+  <div class="hero__content reveal">
+    <div class="hero__logo">
+      <img src="assets/logoSONES.jpg" alt="Logo Société Nationale des Eaux du Sénégal" />
+    </div>
+    <div class="hero__badge"><span class="pulse-dot"></span> Société Nationale des Eaux du Sénégal</div>
+    <h1 class="hero__title">
+      Plan Stratégique de<br><span class="grad-text">Développement</span> 2026&ndash;2030
+    </h1>
+    <p class="hero__sub">
+      Proposition de conception, de méthodologie, de plan de travail et d'organisation
+      pour l'élaboration du PSD et du Contrat de Performance de la SONES.
+    </p>
+    <div class="hero__cta">
+      <a href="#methodologie" class="btn btn--primary">Découvrir la méthodologie <span>&darr;</span></a>
+      <a href="#consultant" class="btn btn--ghost">Le Consultant</a>
+    </div>
+
+    <div class="hero__stats">
+      <div class="hstat"><b data-count="4">0</b><span>phases clés</span></div>
+      <div class="hstat"><b data-count="16">0</b><span>semaines</span></div>
+      <div class="hstat"><b data-count="1440">0</b><span>heures</span></div>
+      <div class="hstat"><b data-count="5">0</b><span>ans de vision</span></div>
+    </div>
+  </div>
+
+  <div class="hero__waves" aria-hidden="true">
+    <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
+      <path class="wave wave--3" d="M0,120 C240,180 480,60 720,110 C960,160 1200,80 1440,120 L1440,200 L0,200 Z"></path>
+      <path class="wave wave--2" d="M0,140 C240,90 480,190 720,130 C960,70 1200,170 1440,120 L1440,200 L0,200 Z"></path>
+      <path class="wave wave--1" d="M0,150 C240,200 480,110 720,150 C960,190 1200,120 1440,160 L1440,200 L0,200 Z"></path>
+    </svg>
+  </div>
+  <a href="#contexte" class="hero__scroll" aria-label="Défiler"><span></span></a>
+</section>
+
+<!-- CONTEXTE -->
+<section class="section section--light" id="contexte">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-kicker">I · Contexte</span>
+      <h2 class="sec-title">Le contexte de la mission</h2>
+      <p class="sec-lead">
+        Créée par la loi n°95-10 du 7 avril 1995, la <strong>Société Nationale des Eaux du Sénégal</strong>
+        est une société nationale du secteur parapublic, dont le capital est souscrit à 99,93% par l'État
+        du Sénégal et à 0,07% par huit communes chefs-lieux de région.
+      </p>
+    </div>
+
+    <div class="grid grid--4 missions">
+      <article class="card mcard reveal">
+        <div class="mcard__icon">
+          <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+        </div>
+        <h3>Gestion du patrimoine</h3>
+        <p>Sécurisation du patrimoine foncier et immobilier, suivi technique et administratif des biens.</p>
+      </article>
+      <article class="card mcard reveal" data-delay="1">
+        <div class="mcard__icon">
+          <svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 14l4-4 3 3 5-6"/></svg>
+        </div>
+        <h3>Programmation des investissements</h3>
+        <p>Recherche de financements, maîtrise d'ouvrage et d'œuvre des travaux de renouvellement et d'extension.</p>
+      </article>
+      <article class="card mcard reveal" data-delay="2">
+        <div class="mcard__icon">
+          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/></svg>
+        </div>
+        <h3>Contrôle de la qualité</h3>
+        <p>Qualité de l'eau, du service public et de la performance du fermier au cœur de l'exploitation.</p>
+      </article>
+      <article class="card mcard reveal" data-delay="3">
+        <div class="mcard__icon">
+          <svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+        </div>
+        <h3>Sensibilisation du public</h3>
+        <p>Information et mobilisation des usagers autour de l'accès et de la préservation de l'eau.</p>
+      </article>
+    </div>
+
+    <div class="callout reveal">
+      <div class="callout__icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+      </div>
+      <div>
+        <h3>Une obligation légale, une ambition nationale</h3>
+        <p>
+          En référence à la loi d'orientation n°2022-08 du 19 avril 2022 et au décret n°2025-671,
+          la SONES est tenue d'élaborer un <strong>Plan Stratégique de Développement sur 5 ans</strong>,
+          associé à un contrat de performance. Le PSD s'alignera sur la <strong>Vision Sénégal 2050</strong>
+          et la Lettre de Politique Sectorielle de Développement du Ministère de l'Hydraulique et de
+          l'Assainissement (2025-2029), pour inscrire la SONES dans la trajectoire d'accès universel à
+          l'eau et à l'assainissement.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSULTANT -->
+<section class="section section--dark" id="consultant">
+  <div class="container">
+    <div class="sec-head sec-head--light reveal">
+      <span class="sec-kicker">III · Le Consultant</span>
+      <h2 class="sec-title">Qualification &amp; compétence</h2>
+    </div>
+
+    <div class="consultant">
+      <div class="consultant__photo reveal">
+        <div class="photo-glow"></div>
+        <img src="assets/alpha.png" alt="Dr Alpha Youssoupha GUEYE" />
+        <div class="photo-badge">
+          <b>22</b><span>ans d'expérience</span>
+        </div>
+      </div>
+
+      <div class="consultant__body reveal" data-delay="1">
+        <h3 class="consultant__name">Dr Alpha Youssoupha GUEYE</h3>
+        <p class="consultant__role">Expert en planification stratégique · Expert-comptable diplômé (ONECCA)</p>
+        <div class="role-badges">
+          <span class="brand-chip"><img src="assets/onecca.png" alt="ONECCA" /></span>
+          <img class="flag" src="assets/flag-senegal.svg" alt="Drapeau du Sénégal" title="Sénégal" />
+        </div>
+        <p>
+          Économiste et expert international en planification stratégique de développement, gouvernance
+          publique et infrastructures, reconnu pour sa capacité à articuler les dimensions économiques,
+          institutionnelles et organisationnelles dans la conception, la mise en œuvre et l'évaluation
+          des politiques publiques.
+        </p>
+        <figure class="doc-figure">
+          <img src="assets/doctorat.webp" alt="Parcours doctoral" />
+          <figcaption>Double parcours doctoral</figcaption>
+        </figure>
+        <p>
+          Titulaire d'un doctorat en sciences de gestion (États-Unis
+          <img class="flag" src="assets/flag-usa.svg" alt="Drapeau des États-Unis" title="États-Unis" />)
+          et d'un doctorat préparé à l'UCAD
+          <span class="brand-chip brand-chip--sm"><img src="assets/UCAD.jpg" alt="UCAD" /></span>
+          de Dakar, Expert-Comptable inscrit à l'ONECCA. Fort de plus de 20 années d'expérience,
+          il s'est imposé comme une référence dans la planification stratégique, l'évaluation et la
+          rédaction des contrats de performance au Sénégal et dans plusieurs pays africains.
+        </p>
+
+        <div class="chips">
+          <span>Planification stratégique</span>
+          <span>Contrats de performance</span>
+          <span>Audit organisationnel &amp; financier</span>
+          <span>Gouvernance publique</span>
+          <span>PPP</span>
+          <span>ISA · COSO · ISO 9001 · 31000 · 27001</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="clients reveal">
+      <h4 class="clients__title">Une expérience confirmée dans le secteur hydraulique</h4>
+      <div class="grid grid--3 clients__grid">
+        <div class="client-card client-card--logo"><span class="client-logo"><img src="assets/banque-mondiale.webp" alt="Banque Mondiale" /></span><b>Banque mondiale</b><span>Évaluation et analyse de politiques publiques en Afrique centrale</span></div>
+        <div class="client-card client-card--logo"><span class="client-logo"><img src="assets/ARCOP.webp" alt="ARCOP" /></span><b>ARCOP</b><span>Évaluation des infrastructures hydrauliques et des contrats PPP</span></div>
+        <div class="client-card client-card--logo"><span class="client-logo"><img src="assets/ageroute.png" alt="AGEROUTE Sénégal" /></span><b>AGEROUTE Sénégal</b><span>Plan stratégique et évaluation de projets routiers &amp; autoroutiers</span></div>
+        <div class="client-card client-card--logo"><span class="client-logo"><img src="assets/ADS.jpg" alt="Autoroutes du Sénégal" /></span><b>Autoroutes du Sénégal (ADS)</b><span>PSD 2026-2030 &amp; contrat de performance 2026-2028 finalisés</span></div>
+        <div class="client-card client-card--logo"><span class="client-logo client-logo--flags"><img class="flag" src="assets/flag-guinee.svg" alt="Guinée" title="Guinée" /><img class="flag" src="assets/flag-maroc.svg" alt="Maroc" title="Maroc" /></span><b>Guinée · Maroc</b><span>Études économiques et d'optimisation de la gouvernance</span></div>
+        <div class="client-card client-card--logo"><span class="client-logo client-logo--flags"><img class="flag" src="assets/flag-tchad.svg" alt="Tchad" title="Tchad" /><img class="flag" src="assets/flag-congo.svg" alt="Congo" title="Congo" /></span><b>Tchad · Congo</b><span>Missions sur la gouvernance des infrastructures hydrauliques</span></div>
+      </div>
+    </div>
+
+    <div class="counters reveal">
+      <div class="counter"><b data-count="22">0</b><span>ans d'expérience</span></div>
+      <div class="counter"><b data-count="2">0</b><span>doctorats</span></div>
+      <div class="counter"><b data-count="10" data-suffix="+">0</b><span>ans en hydraulique</span></div>
+      <div class="counter"><b data-count="8" data-suffix="+">0</b><span>pays d'intervention</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- METHODOLOGIE -->
+<section class="section section--light" id="methodologie">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-kicker">IV · Méthodologie</span>
+      <h2 class="sec-title">Conception, méthodologie &amp; approche</h2>
+      <p class="sec-lead">
+        Une approche méthodologique rigoureuse, un plan de travail et une organisation du personnel
+        efficaces et en harmonie avec les besoins de la mission, articulés autour de trois volets.
+      </p>
+    </div>
+
+    <div class="grid grid--3 pillars reveal">
+      <div class="pillar"><span class="pillar__num">01</span><h3>Conception technique &amp; méthodologie</h3><p>Comprendre la SONES, définir les objectifs et l'approche d'exécution.</p></div>
+      <div class="pillar"><span class="pillar__num">02</span><h3>Programme de travail</h3><p>Un calendrier maîtrisé sur 16 semaines et des livrables planifiés.</p></div>
+      <div class="pillar"><span class="pillar__num">03</span><h3>Organisation du personnel</h3><p>Une équipe d'experts complémentaires mobilisés sur la mission.</p></div>
+    </div>
+
+    <h3 class="subhead reveal">Les 4 phases clés de l'intervention</h3>
+    <p class="sec-lead reveal" style="margin-bottom:2.5rem">
+      Notre intervention comprend quatre phases tenant compte des finalités poursuivies par la mission.
+      Cliquez sur une étape pour explorer son contenu.
+    </p>
+
+    <div class="timeline" id="timeline">
+      <!-- Step 1 -->
+      <div class="tl-step reveal is-open">
+        <div class="tl-marker"><span>1</span></div>
+        <div class="tl-card">
+          <button class="tl-head">
+            <div>
+              <span class="tl-tag">Étape 1</span>
+              <h4>Cadrage et lancement de la mission</h4>
+            </div>
+            <span class="tl-chevron">+</span>
+          </button>
+          <div class="tl-body">
+            <p>Une phase essentielle à la réussite de la mission : confirmer les objectifs et enjeux, valider
+              le périmètre et les livrables, identifier les interlocuteurs et les attentes.</p>
+            <div class="substeps">
+              <div class="substep"><b>1.1</b> Réunion de cadrage et de lancement</div>
+              <div class="substep"><b>1.2</b> Entretien avec les responsables désignés</div>
+              <div class="substep"><b>1.3</b> Collecte et exploitation des documents</div>
+              <div class="substep"><b>1.4</b> Transmission du rapport de cadrage</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="tl-step reveal">
+        <div class="tl-marker"><span>2</span></div>
+        <div class="tl-card">
+          <button class="tl-head">
+            <div>
+              <span class="tl-tag">Étape 2</span>
+              <h4>Diagnostic stratégique</h4>
+            </div>
+            <span class="tl-chevron">+</span>
+          </button>
+          <div class="tl-body">
+            <p>Les travaux préalables indispensables : analyse des mécanismes internes et externes à l'aide
+              d'outils tels que <strong>SWOT</strong>, <strong>PESTEL</strong> et <strong>VRIO</strong>.</p>
+            <div class="substeps">
+              <div class="substep"><b>2.1</b> Réalisation d'un état des lieux</div>
+              <div class="substep"><b>2.2</b> Exploration du secteur hydraulique</div>
+              <div class="substep"><b>2.3</b> Réalisation d'un benchmarking</div>
+              <div class="substep"><b>2.4</b> Élaboration du rapport diagnostic</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="tl-step reveal">
+        <div class="tl-marker"><span>3</span></div>
+        <div class="tl-card">
+          <button class="tl-head">
+            <div>
+              <span class="tl-tag">Étape 3</span>
+              <h4>Rédaction du Plan Stratégique de Développement</h4>
+            </div>
+            <span class="tl-chevron">+</span>
+          </button>
+          <div class="tl-body">
+            <p>Définition du cadre stratégique — vision, missions, valeurs et principes directeurs — puis
+              le pilotage, le suivi-évaluation et le plan d'actions chiffré.</p>
+            <div class="substeps">
+              <div class="substep"><b>3.1</b> Définition du cadre stratégique</div>
+              <div class="substep"><b>3.2</b> Cadre de pilotage, mise en œuvre &amp; suivi-évaluation</div>
+              <div class="substep"><b>3.3</b> Rapport provisoire du PSD 2026-2030</div>
+              <div class="substep"><b>3.4</b> Atelier de partage</div>
+              <div class="substep"><b>3.5</b> Plan stratégique quinquennal validé</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="tl-step reveal">
+        <div class="tl-marker"><span>4</span></div>
+        <div class="tl-card">
+          <button class="tl-head">
+            <div>
+              <span class="tl-tag">Étape 4</span>
+              <h4>Élaboration du Contrat de Performance</h4>
+            </div>
+            <span class="tl-chevron">+</span>
+          </button>
+          <div class="tl-body">
+            <p>Un contrat arrimé au PSD à travers ses axes stratégiques, avec des indicateurs de performance
+              précis et un cadre de suivi rigoureux.</p>
+            <div class="substeps">
+              <div class="substep"><b>4.1</b> Détermination des engagements de l'État</div>
+              <div class="substep"><b>4.2</b> Détermination des engagements de la SONES</div>
+              <div class="substep"><b>4.3</b> Détermination des indicateurs de performance</div>
+              <div class="substep"><b>4.4</b> Projet de contrat de performance</div>
+              <div class="substep"><b>4.5</b> Atelier de partage</div>
+              <div class="substep"><b>4.6</b> Contrat de performance validé</div>
+              <div class="substep"><b>4.7</b> Cadre de suivi de la performance</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMME -->
+<section class="section section--gradient" id="programme">
+  <div class="container">
+    <div class="sec-head sec-head--light reveal">
+      <span class="sec-kicker">IV.2 · Programme de travail</span>
+      <h2 class="sec-title">Un calendrier maîtrisé</h2>
+      <p class="sec-lead">
+        Du cadrage jusqu'à la remise des rapports provisoires, la mission se déroulera sur une période
+        prévisionnelle de quatre mois calendaires, soit seize semaines ouvrées.
+      </p>
+    </div>
+
+    <div class="prog-stats reveal">
+      <div class="pstat"><b data-count="4">0</b><span>mois calendaires</span></div>
+      <div class="pstat"><b data-count="16">0</b><span>semaines ouvrées</span></div>
+      <div class="pstat"><b data-count="1440">0</b><span>heures de travail</span></div>
+      <div class="pstat"><b data-count="4">0</b><span>livrables majeurs</span></div>
+    </div>
+
+    <div class="roadmap reveal">
+      <div class="rm-item"><span class="rm-week">S1-S3</span><div><b>Cadrage &amp; lancement</b><p>Rapport de cadrage / plan de mission</p></div></div>
+      <div class="rm-item"><span class="rm-week">S4-S8</span><div><b>Diagnostic stratégique</b><p>Rapport diagnostic (SWOT, PESTEL, VRIO, benchmarking)</p></div></div>
+      <div class="rm-item"><span class="rm-week">S9-S13</span><div><b>Rédaction du PSD</b><p>Plan stratégique de développement 2026-2030</p></div></div>
+      <div class="rm-item"><span class="rm-week">S14-S16</span><div><b>Contrat de performance</b><p>Contrat de performance validé &amp; cadre de suivi</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPE -->
+<section class="section section--light" id="equipe">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-kicker">IV.3 · Organisation du personnel</span>
+      <h2 class="sec-title">Une équipe d'experts complémentaires</h2>
+      <p class="sec-lead">
+        Pour une meilleure prise en charge de la mission, le Dr GUEYE est appuyé par deux experts
+        aux expertises transversales.
+      </p>
+    </div>
+
+    <div class="grid grid--3 team">
+      <article class="team-card team-card--lead reveal">
+        <div class="team-card__top">
+          <img src="assets/alpha.png" alt="Dr Alpha Youssoupha GUEYE" class="team-avatar" />
+          <span class="team-badge">Chef de mission</span>
+        </div>
+        <h3>Dr Alpha Youssoupha GUEYE</h3>
+        <p class="team-role">Expert en planification stratégique · Expert-comptable</p>
+        <p class="team-desc">22 ans d'expérience en planification stratégique, évaluation de politiques publiques et contrats de performance en Afrique.</p>
+        <span class="team-exp">22 ans</span>
+      </article>
+
+      <article class="team-card reveal" data-delay="1">
+        <div class="team-card__top">
+          <div class="team-initials">MN</div>
+        </div>
+        <h3>M. Madiagne NDIAYE</h3>
+        <p class="team-role">Ingénieur électromécanique · PMP</p>
+        <p class="team-desc">Ingénieur (EPT), MBA Gestion de Projet (CESAG), Master Ingénierie Financière. Double expertise technique et financière (électromécanique, hydraulique, gaz, PPP).</p>
+        <span class="team-exp">17 ans</span>
+      </article>
+
+      <article class="team-card reveal" data-delay="2">
+        <div class="team-card__top">
+          <img src="assets/fall.png" alt="M. Babacar Sedikh FALL" class="team-avatar" />
+        </div>
+        <h3>M. Babacar Sedikh FALL</h3>
+        <p class="team-role">Conseiller sénior</p>
+        <p class="team-desc">13 ans au Cabinet ADOC Audit &amp; Conseil, spécialiste du secteur hydraulique : analyse de marché, benchmarking et stratégie commerciale.</p>
+        <span class="team-exp">13 ans</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__bg" aria-hidden="true">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,60 C360,120 720,0 1080,60 C1260,90 1350,50 1440,60 L1440,120 L0,120 Z"/></svg>
+  </div>
+  <div class="container footer__inner">
+    <img src="assets/logoSONES.jpg" alt="Logo SONES" class="footer__logo" />
+    <div class="footer__text">
+      <h3>Société Nationale des Eaux du Sénégal</h3>
+      <p>Plan Stratégique de Développement &amp; Contrat de Performance · 2026-2030</p>
+    </div>
+    <a href="#hero" class="btn btn--primary footer__top">Haut de page ↑</a>
+  </div>
+  <div class="footer__legal">Document méthodologique · Vision Sénégal 2050 · Accès universel à l'eau et à l'assainissement</div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
