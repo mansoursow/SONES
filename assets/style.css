@@ -159,6 +159,13 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.12;font-weight:700;letter
 /* ---------- Sections ---------- */
 .section{position:relative;padding:clamp(4.5rem,9vw,8rem) 0}
 .section--light{background:var(--paper)}
+
+/* Bandeau 30 ans (complet) en tête de la section Contexte */
+.context-banner{
+  border-radius:var(--radius);overflow:hidden;margin:0 auto 2.8rem;
+  box-shadow:var(--shadow-md);border:1px solid var(--line);line-height:0;
+}
+.context-banner img{width:100%;height:auto;display:block}
 .section--dark{background:var(--grad-deep);color:#fff}
 .section--gradient{background:var(--grad-sones);color:#fff;overflow:hidden}
 
