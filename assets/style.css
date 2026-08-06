@@ -285,58 +285,6 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.12;font-weight:700;letter
   .align2050__grid{grid-template-columns:1fr}
 }
 
-/* Cadre technique à enrichir : accordéon + tableaux */
-.accordion{max-width:960px;margin:0 auto 3rem;display:grid;gap:1rem}
-.acc-item{background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);box-shadow:var(--shadow-sm);overflow:hidden;transition:.3s}
-.acc-item:hover{box-shadow:var(--shadow-md)}
-.acc-head{width:100%;display:flex;align-items:center;gap:1rem;padding:1.15rem 1.3rem;background:none;border:0;cursor:pointer;text-align:left;font-family:var(--font-body)}
-.acc-num{flex-shrink:0;width:38px;height:38px;border-radius:11px;background:var(--grad-water);color:#fff;display:grid;place-items:center;font-family:var(--font-head);font-weight:800;font-size:1.05rem;box-shadow:0 6px 16px rgba(38,182,216,.32)}
-.acc-title{flex:1;font-family:var(--font-head);font-weight:700;font-size:1.02rem;color:var(--ink)}
-.acc-title em{font-style:normal;font-weight:500;color:var(--ink-soft);font-size:.9rem}
-.acc-chevron{flex-shrink:0;width:32px;height:32px;border-radius:50%;background:var(--paper-2);display:grid;place-items:center;font-size:1.3rem;color:var(--blue);transition:.35s}
-.acc-item.is-open .acc-chevron{transform:rotate(45deg);background:var(--grad-water);color:#fff}
-.acc-item.is-open .acc-num{transform:scale(1.06)}
-.acc-body{max-height:0;overflow:hidden;transition:max-height .45s ease;padding:0 1.3rem}
-.acc-item.is-open .acc-body{max-height:1400px;padding:0 1.3rem 1.4rem}
-.acc-body>p{color:var(--ink-soft);font-size:.94rem;margin-bottom:1rem}
-.acc-body strong{color:var(--blue)}
-.acc-note{background:var(--paper);border-left:3px solid var(--green);border-radius:0 10px 10px 0;padding:.85rem 1.1rem;font-size:.9rem!important;color:var(--ink)!important}
-.acc-note b{color:var(--green)}
-.acc-list{margin:0 0 .5rem;padding-left:1.2rem;display:grid;gap:.5rem}
-.acc-list li{color:var(--ink-soft);font-size:.94rem}
-.acc-list b{color:var(--ink)}
-
-/* Flowchain (point 1) */
-.flowchain{display:grid;gap:.35rem;margin:0 0 1.2rem;justify-items:center}
-.flowchain__node{width:100%;max-width:480px;background:linear-gradient(135deg,#fff,#eef6ff);border:1px solid var(--line);border-left:4px solid var(--aqua);border-radius:12px;padding:.75rem 1.1rem;text-align:center}
-.flowchain__node b{display:block;font-family:var(--font-head);color:var(--ink);font-size:1rem}
-.flowchain__node span{font-size:.82rem;color:var(--ink-soft)}
-.flowchain__arrow{color:var(--aqua);font-size:1.3rem;font-weight:700;line-height:.8}
-
-/* Tableaux */
-.acc-table-wrap{overflow-x:auto;border-radius:12px;border:1px solid var(--line);margin-bottom:1rem}
-.acc-table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:420px}
-.acc-table thead th{background:var(--grad-deep);color:#fff;text-align:left;padding:.75rem 1rem;font-family:var(--font-head);font-weight:600;font-size:.85rem}
-.acc-table td{padding:.7rem 1rem;border-top:1px solid var(--line);color:var(--ink-soft);vertical-align:top}
-.acc-table tbody tr:nth-child(even){background:var(--paper)}
-.acc-table td b{color:var(--ink)}
-.td-bad{color:#b4341f!important;text-decoration:line-through;text-decoration-color:rgba(180,52,31,.4)}
-.td-good{color:var(--green)!important;font-weight:600}
-
-/* Synthèse des livrables */
-.livrables{max-width:960px;margin:0 auto;background:var(--grad-deep);border-radius:var(--radius);padding:clamp(1.5rem,3vw,2.4rem);box-shadow:var(--shadow-md)}
-.livrables__title{color:#fff;font-size:clamp(1.2rem,2.5vw,1.6rem);text-align:center;margin-bottom:1.6rem}
-.livrables__table{min-width:340px}
-.livrables__table thead th{background:rgba(255,255,255,.1)}
-.livrables__table{background:rgba(255,255,255,.03)}
-.livrables .acc-table-wrap{border-color:rgba(255,255,255,.15)}
-.livrables__table td{border-top-color:rgba(255,255,255,.12);color:rgba(255,255,255,.85)}
-.livrables__table tbody tr:nth-child(even){background:rgba(255,255,255,.05)}
-.liv-num{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:9px;background:var(--grad-water);color:#fff;font-family:var(--font-head);font-weight:800;font-size:.9rem}
-@media (max-width:640px){
-  .acc-title{font-size:.95rem}
-}
-
 /* Timeline */
 .timeline{position:relative;max-width:920px;margin:0 auto;padding-left:20px}
 .timeline::before{content:"";position:absolute;left:37px;top:12px;bottom:12px;width:3px;background:linear-gradient(var(--blue),var(--aqua),var(--green))}
