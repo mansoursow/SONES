@@ -79,6 +79,13 @@
     });
   });
 
+  /* ---------- Cadre à enrichir : accordéon (dépliage indépendant) ---------- */
+  document.querySelectorAll('.acc-head').forEach(function (head) {
+    head.addEventListener('click', function () {
+      head.closest('.acc-item').classList.toggle('is-open');
+    });
+  });
+
   /* ---------- Active nav link ---------- */
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav__links a');
