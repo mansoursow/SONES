@@ -281,8 +281,16 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.12;font-weight:700;letter
 .a2050-item h4{font-size:1.05rem;margin-bottom:.45rem;color:var(--ink)}
 .a2050-item p{font-size:.9rem;color:var(--ink-soft)}
 .a2050-item strong{color:var(--blue)}
+.a2050-item--wide{grid-column:1 / -1;background:linear-gradient(135deg,#ffffff 0%,#eefaf2 100%);border-left:3px solid var(--green)}
+.a2050-item__icon--gov{background:var(--grad-deep)}
+.guide-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem;margin-top:1.1rem}
+.guide-chip{display:flex;gap:.65rem;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:11px;padding:.65rem .85rem;font-size:.86rem;color:var(--ink-soft);transition:.25s}
+.guide-chip:hover{border-color:rgba(22,146,74,.4);transform:translateX(3px)}
+.guide-chip b{flex-shrink:0;width:24px;height:24px;border-radius:7px;background:var(--grad-sones);color:#fff;display:grid;place-items:center;font-family:var(--font-head);font-size:.76rem;font-weight:800}
+.guide-chip span{padding-top:1px}
 @media (max-width:760px){
   .align2050__grid{grid-template-columns:1fr}
+  .guide-grid{grid-template-columns:1fr}
 }
 
 /* Timeline */
