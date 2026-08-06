@@ -255,6 +255,36 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.12;font-weight:700;letter
 
 .subhead{text-align:center;font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800;margin-bottom:.8rem}
 
+/* Volet mis en avant : Alignement Vision 2050 */
+.align2050{
+  background:linear-gradient(135deg,#ffffff 0%,#eef6ff 100%);
+  border:1px solid var(--line);border-left:5px solid var(--aqua);
+  border-radius:var(--radius);padding:clamp(1.6rem,3vw,2.4rem);
+  box-shadow:var(--shadow-sm);margin-bottom:4.5rem;
+}
+.align2050__head{display:flex;align-items:center;gap:1.2rem;margin-bottom:1.8rem}
+.align2050__num{
+  flex-shrink:0;width:64px;height:64px;border-radius:18px;background:var(--grad-water);
+  color:#fff;display:grid;place-items:center;font-family:var(--font-head);font-weight:800;
+  font-size:1.6rem;box-shadow:0 10px 24px rgba(38,182,216,.35)
+}
+.align2050__tag{
+  display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--green);background:rgba(22,146,74,.1);padding:.32rem .85rem;border-radius:999px;margin-bottom:.55rem
+}
+.align2050__head h3{font-size:clamp(1.15rem,2.2vw,1.4rem);color:var(--ink)}
+.align2050__grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.a2050-item{display:flex;gap:1rem;background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:1.4rem;transition:.3s}
+.a2050-item:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.a2050-item__icon{flex-shrink:0;width:48px;height:48px;border-radius:13px;background:var(--grad-sones);display:grid;place-items:center;box-shadow:0 8px 18px rgba(22,146,74,.28)}
+.a2050-item__icon svg{width:24px;height:24px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.a2050-item h4{font-size:1.05rem;margin-bottom:.45rem;color:var(--ink)}
+.a2050-item p{font-size:.9rem;color:var(--ink-soft)}
+.a2050-item strong{color:var(--blue)}
+@media (max-width:760px){
+  .align2050__grid{grid-template-columns:1fr}
+}
+
 /* Timeline */
 .timeline{position:relative;max-width:920px;margin:0 auto;padding-left:20px}
 .timeline::before{content:"";position:absolute;left:37px;top:12px;bottom:12px;width:3px;background:linear-gradient(var(--blue),var(--aqua),var(--green))}
