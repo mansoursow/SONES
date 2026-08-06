@@ -306,13 +306,67 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.12;font-weight:700;letter
 .tl-chevron{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:var(--paper-2);display:grid;place-items:center;font-size:1.4rem;font-weight:400;color:var(--blue);transition:.35s}
 .tl-step.is-open .tl-chevron{transform:rotate(45deg);background:var(--grad-water);color:#fff}
 .tl-body{max-height:0;overflow:hidden;transition:max-height .5s ease,padding .4s ease;padding:0 1.8rem}
-.tl-step.is-open .tl-body{max-height:640px;padding:0 1.8rem 1.8rem}
+.tl-step.is-open .tl-body{max-height:4000px;padding:0 1.8rem 1.8rem}
 .tl-body>p{color:var(--ink-soft);margin-bottom:1.2rem;font-size:.96rem}
 .substeps{display:grid;gap:.6rem}
 .substep{display:flex;gap:.8rem;align-items:baseline;padding:.7rem 1rem;background:var(--paper);border-radius:12px;font-size:.92rem;color:var(--ink);transition:.25s}
 .substep:hover{background:var(--paper-2);transform:translateX(4px)}
 .substep b{font-family:var(--font-head);color:var(--blue);font-size:.85rem;flex-shrink:0}
 .tl-step.is-open .tl-marker{transform:scale(1.08);box-shadow:0 10px 28px rgba(38,182,216,.6)}
+.tl-head h4 em{font-style:normal;font-weight:500;color:var(--ink-soft);font-size:.88rem}
+
+/* Sous-titres, chips et livrables dans les phases */
+.tl-sub{font-size:.76rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--aqua);margin:1.3rem 0 .7rem}
+.mchips{display:flex;flex-wrap:wrap;gap:.5rem}
+.mchips--center{justify-content:center}
+.mchips span{font-size:.82rem;font-weight:600;padding:.45rem .9rem;border-radius:999px;background:var(--paper);border:1px solid var(--line);color:var(--ink);transition:.25s}
+.mchips span:hover{background:var(--grad-water);color:#fff;border-color:transparent;transform:translateY(-2px);box-shadow:0 6px 16px rgba(38,182,216,.3)}
+.tl-livrable{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap;margin-top:1.2rem;background:linear-gradient(120deg,#eefaf2,#fff);border-left:4px solid var(--green);border-radius:0 12px 12px 0;padding:.85rem 1.1rem;font-size:.9rem;color:var(--ink)}
+.tl-livrable b{font-family:var(--font-head);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--grad-sones);padding:.3rem .75rem;border-radius:999px;flex-shrink:0}
+.tl-livrable--alt{background:linear-gradient(120deg,#eef6ff,#fff);border-left-color:var(--blue)}
+.tl-livrable--alt b{background:var(--grad-water)}
+
+/* Cartes de diagnostic */
+.diag-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:.4rem}
+.diag-card{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--aqua);border-radius:12px;padding:.9rem 1rem;transition:.28s}
+.diag-card:hover{background:#fff;transform:translateY(-4px);box-shadow:var(--shadow-sm)}
+.diag-card b{display:block;font-family:var(--font-head);font-size:.95rem;color:var(--ink);margin-bottom:.3rem}
+.diag-card span{font-size:.82rem;color:var(--ink-soft)}
+.light-dot{display:inline-block;width:11px;height:11px;border-radius:50%;margin-left:.3rem;vertical-align:middle}
+.dot-g{background:#22c55e}.dot-o{background:#f59e0b}.dot-r{background:#ef4444}
+
+/* Architecture en cascade (phase 5) */
+.archi{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.4rem;padding:1.2rem;background:var(--paper);border-radius:14px;border:1px solid var(--line)}
+.archi span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:.45rem 1rem;font-family:var(--font-head);font-weight:600;font-size:.85rem;color:var(--ink);box-shadow:var(--shadow-sm)}
+.archi i{color:var(--aqua);font-style:normal;font-weight:700;transform:rotate(-90deg)}
+
+/* Digital Twin */
+.dtwin{max-width:920px;margin:3rem auto 0;background:var(--grad-deep);color:#fff;border-radius:var(--radius);padding:clamp(1.6rem,3vw,2.4rem);box-shadow:var(--shadow-md);position:relative;overflow:hidden}
+.dtwin::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 15%,rgba(67,212,236,.28),transparent 55%);pointer-events:none}
+.dtwin__head{display:flex;align-items:center;gap:1.1rem;margin-bottom:1.3rem;position:relative;z-index:2}
+.dtwin__icon{flex-shrink:0;width:58px;height:58px;border-radius:16px;background:var(--grad-water);display:grid;place-items:center;box-shadow:0 10px 26px rgba(38,182,216,.45)}
+.dtwin__icon svg{width:28px;height:28px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.dtwin__tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);background:rgba(67,212,236,.14);padding:.3rem .8rem;border-radius:999px;margin-bottom:.45rem}
+.dtwin__head h4{font-size:clamp(1.2rem,2.4vw,1.6rem);color:#fff}
+.dtwin>p{color:rgba(255,255,255,.82);font-size:.96rem;position:relative;z-index:2}
+.dtwin strong{color:var(--cyan)}
+.dtwin__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem;margin-top:1.3rem;position:relative;z-index:2}
+.dtwin__item{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:.8rem 1rem;font-size:.88rem;color:rgba(255,255,255,.9);transition:.25s}
+.dtwin__item:hover{background:rgba(255,255,255,.13);transform:translateX(4px);border-color:rgba(67,212,236,.5)}
+
+/* Boîte à outils */
+.toolbox{max-width:920px;margin:2.5rem auto 0;text-align:center}
+.toolbox__title{font-size:clamp(1.15rem,2.4vw,1.5rem);margin-bottom:1.3rem;color:var(--ink)}
+.callout--value{margin-top:2.5rem}
+
+@media (max-width:860px){
+  .diag-grid{grid-template-columns:repeat(2,1fr)}
+  .dtwin__grid{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .diag-grid{grid-template-columns:1fr}
+  .archi i{transform:none}
+}
 
 /* ---------- Programme ---------- */
 .section--gradient::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(255,255,255,.18),transparent 50%);pointer-events:none}
