@@ -160,11 +160,10 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.12;font-weight:700;letter
 .section{position:relative;padding:clamp(4.5rem,9vw,8rem) 0}
 .section--light{background:var(--paper)}
 
-/* Bandeau 30 ans en fond (filigrane, image entière) de la section Contexte */
-#contexte .container{
-  background:
-    linear-gradient(rgba(244,248,252,.55) 0, rgba(244,248,252,.74) 220px, var(--paper) 330px),
-    url('30ans.jpg') top center / contain no-repeat;
+/* Bandeau 30 ans, image entière atténuée, en tête de la section Contexte */
+.context-banner{
+  display:block;width:100%;max-width:1000px;height:auto;
+  margin:0 auto 2.4rem;opacity:.7;
 }
 .section--dark{background:var(--grad-deep);color:#fff}
 .section--gradient{background:var(--grad-sones);color:#fff;overflow:hidden}
