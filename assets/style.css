@@ -163,7 +163,7 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.12;font-weight:700;letter
 /* Bandeau 30 ans, image entière atténuée, en tête de la section Contexte */
 .context-banner{
   display:block;width:100%;max-width:1000px;height:auto;
-  margin:0 auto 2.4rem;opacity:.7;
+  margin:0 auto 2.4rem;opacity:.45;
 }
 .section--dark{background:var(--grad-deep);color:#fff}
 .section--gradient{background:var(--grad-sones);color:#fff;overflow:hidden}
